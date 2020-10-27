@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+    <bean id="a" class="com.qk.beans.StudentA">
+        <!--<constructor-arg index="0" ref="b"></constructor-arg>-->
+        <property name="studentB" ref="b"/>
+    </bean>
+    <bean id="b" class="com.qk.beans.StudentB">
+        <!--<constructor-arg index="0" ref="c"></constructor-arg>-->
+        <property name="studentC" ref="c"/>
+    </bean>
+    <bean id="c" class="com.qk.beans.StudentC">
+        <!--<constructor-arg index="0" ref="a"></constructor-arg>-->
+        <property name="studentA" ref="a"/>
+    </bean>
+</beans>
