@@ -2,7 +2,7 @@ package com.qk.beans;
 
 public class StudentC {
     private StudentA studentA ;
-    private String tgg="abc";
+    private String lxp="amber";
 
     public void setStudentA(StudentA studentA) {
         this.studentA = studentA;
